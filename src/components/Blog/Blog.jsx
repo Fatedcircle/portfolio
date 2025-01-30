@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import blogPostsData from "../../data/blogPosts.json"; // Import je JSON bestand
+import blogPostsData from "../../data/blogPosts.json";
 import './Blog.scss'
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        setPosts(blogPostsData); // Zet de blogposts in de state
-    }, []); // Lege afhankelijkheden array zorgt ervoor dat het maar één keer geladen wordt
+        setPosts(blogPostsData);
+    }, []);
 
     return (
         <div>

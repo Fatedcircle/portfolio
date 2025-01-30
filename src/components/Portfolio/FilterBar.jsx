@@ -1,10 +1,17 @@
 /* eslint-disable react/prop-types */
-const FilterBar = ({ selectedFilter, setSelectedFilter, selectedTags, setSelectedTags, searchQuery, setSearchQuery }) => {
+const FilterBar = ({
+    selectedFilter,
+    setSelectedFilter,
+    selectedTags,
+    setSelectedTags,
+    searchQuery,
+    setSearchQuery,
+    setSortOrder,
+}) => {
     const allTags = ["React", "JavaScript", "Node.js", "MongoDB", "Angular", "UI/UX", "API", "Design"];
 
     return (
         <div>
-            {/* Zoekbalk */}
             <div>
                 <input
                     type="text"
@@ -14,7 +21,6 @@ const FilterBar = ({ selectedFilter, setSelectedFilter, selectedTags, setSelecte
                 />
             </div>
 
-            {/* Dropdown voor filters */}
             <div>
                 <select
                     value={selectedFilter}
@@ -28,7 +34,6 @@ const FilterBar = ({ selectedFilter, setSelectedFilter, selectedTags, setSelecte
                 </select>
             </div>
 
-            {/* Tagcloud */}
             <div>
                 <h3>Tags</h3>
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
@@ -56,6 +61,17 @@ const FilterBar = ({ selectedFilter, setSelectedFilter, selectedTags, setSelecte
                         </button>
                     ))}
                 </div>
+            </div>
+
+            <div>
+                <label>Sort by: </label>
+                <select
+                    onChange={(e) => setSortOrder(e.target.value)} // Sorteren
+                    value={selectedFilter.sortOrder}
+                >
+                    <option value="recent">Recent First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
             </div>
         </div>
     );

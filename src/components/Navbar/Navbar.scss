@@ -1,4 +1,3 @@
-/* Algemene navbar-stijlen */
 .navbar {
     position: fixed;
     top: 0;
@@ -14,24 +13,21 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo styling */
 .navbar h1 {
     margin: 0;
 }
 
-/* Hamburger-menu (alleen zichtbaar op mobiel) */
 .hamburger-menu {
     background: none;
     border: none;
     color: white;
     font-size: 24px;
-    display: none; /* Verborgen standaard */
+    display: none;
     cursor: pointer;
 }
 
-/* Navigatielinks */
 .navbar-links {
-    display: flex; /* Standaard display voor desktop */
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -51,7 +47,7 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Stijlen voor mobiel menu */
+
 .navbar-links.mobile-open {
     display: block;
     position: absolute;
@@ -69,14 +65,13 @@
     width: 100%;
 }
 
-/* Mobiele weergave van hamburger-menu */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: block; /* Toon hamburger-menu op mobiel */
+        display: block;
     }
 
     .navbar-links {
-        display: none; /* Verborgen standaard op mobiel */
+        display: none;
     }
 
     .navbar-links.mobile-open {

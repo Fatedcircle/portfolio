@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import './Navbar.scss'; // Importeer de CSS
+import './Navbar.scss';
 
 const Navbar = ({ setActivePage }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,12 +11,10 @@ const Navbar = ({ setActivePage }) => {
 
     return (
         <nav className="navbar">
-            {/* Logo */}
             <div>
                 <h1>My Portfolio</h1>
             </div>
 
-            {/* Hamburger menu (alleen zichtbaar op mobiel) */}
             <button
                 onClick={handleMenuToggle}
                 className="hamburger-menu"
@@ -24,7 +22,6 @@ const Navbar = ({ setActivePage }) => {
                 ☰
             </button>
 
-            {/* Navigatielinks */}
             <ul
                 className={`navbar-links ${isMobileMenuOpen ? "mobile-open" : ""}`}
             >
@@ -33,7 +30,7 @@ const Navbar = ({ setActivePage }) => {
                         <button
                             onClick={() => {
                                 setActivePage(page);
-                                setIsMobileMenuOpen(false); // Sluit menu bij klikken
+                                setIsMobileMenuOpen(false);
                             }}
                         >
                             {page.charAt(0).toUpperCase() + page.slice(1)}

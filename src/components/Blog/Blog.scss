@@ -1,4 +1,3 @@
-/* Algemeen */
 .blog-container {
     width: 80%;
     max-width: 1000px;
@@ -16,7 +15,6 @@
     margin-bottom: 20px;
 }
 
-/* Blogpost */
 .blog-post {
     margin-bottom: 40px;
     padding-bottom: 40px;
@@ -54,7 +52,6 @@
     text-decoration: underline;
 }
 
-/* Afbeeldingen */
 .blog-post img {
     max-width: 100%;
     height: auto;
@@ -63,7 +60,6 @@
     border-radius: 8px;
 }
 
-/* Reactie en commentaar sectie (optioneel) */
 .comment-section {
     margin-top: 40px;
 }
@@ -94,7 +90,6 @@
     font-style: italic;
 }
 
-/* Responsieve styling */
 @media (max-width: 768px) {
     .blog-container {
         width: 90%;

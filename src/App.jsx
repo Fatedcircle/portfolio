@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Portfolio from "./components/Portfolio/Portfolio"; // Je projectencomponent
+import Portfolio from "./components/Portfolio/Portfolio";
 import Blog from "./components/Blog/Blog";
-import About from "./components/About/About"; // Placeholder voor de Over-mij pagina
-import Contact from "./components/Contact/Contact"; // Placeholder voor de Contact-pagina
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import HomePage from "./components/Home/HomePage";
 
 const App = () => {
     const [activePage, setActivePage] = useState("home");
@@ -11,7 +12,7 @@ const App = () => {
     const renderPage = () => {
         switch (activePage) {
             case "home":
-                return <h1>Welcome to My Portfolio</h1>;
+                return <HomePage />;
             case "projects":
                 return <Portfolio />;
             case "blog":
