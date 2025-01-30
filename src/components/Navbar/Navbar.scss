@@ -1,0 +1,85 @@
+/* Algemene navbar-stijlen */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+.navbar h1 {
+    margin: 0;
+}
+
+/* Hamburger-menu (alleen zichtbaar op mobiel) */
+.hamburger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    display: none; /* Verborgen standaard */
+    cursor: pointer;
+}
+
+/* Navigatielinks */
+.navbar-links {
+    display: flex; /* Standaard display voor desktop */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.navbar-links li button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar-links li button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Stijlen voor mobiel menu */
+.navbar-links.mobile-open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #3b82f6;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 10px;
+    text-align: center;
+}
+
+.navbar-links.mobile-open li button {
+    width: 100%;
+}
+
+/* Mobiele weergave van hamburger-menu */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* Toon hamburger-menu op mobiel */
+    }
+
+    .navbar-links {
+        display: none; /* Verborgen standaard op mobiel */
+    }
+
+    .navbar-links.mobile-open {
+        display: block;
+    }
+}

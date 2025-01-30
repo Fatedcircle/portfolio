@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Waarom React gebruiken?",
+        "date": "30 januari 2025",
+        "content": "React is een van de meest populaire libraries voor frontend ontwikkeling. Het maakt het mogelijk om interactieve UI-componenten te bouwen in JavaScript."
+    },
+    {
+        "id": 2,
+        "title": "CSS-in-JS: Voordelen en Nadelen",
+        "date": "28 januari 2025",
+        "content": "CSS-in-JS biedt de mogelijkheid om CSS direct in JavaScript te schrijven. Dit kan voordelig zijn voor modulaire stijlen en scoped styling."
+    },
+    {
+        "id": 3,
+        "title": "Waarom kiezen voor een headless CMS?",
+        "date": "25 januari 2025",
+        "content": "Een headless CMS stelt je in staat om content te beheren zonder dat je gebonden bent aan een specifieke frontend technologie. Het biedt veel flexibiliteit voor ontwikkelaars."
+    }
+]

@@ -1,14 +1,36 @@
-import './App.css'
-import Portfolio from './components/Portfolio'
+import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Portfolio from "./components/Portfolio/Portfolio"; // Je projectencomponent
+import Blog from "./components/Blog/Blog";
+import About from "./components/About/About"; // Placeholder voor de Over-mij pagina
+import Contact from "./components/Contact/Contact"; // Placeholder voor de Contact-pagina
 
-function App() {
+const App = () => {
+    const [activePage, setActivePage] = useState("home");
 
-  return (
-    <>
-    <h1 className='text-4xl text-indigo-700'>pizza</h1>
-    <Portfolio />
-    </>
-  )
-}
+    const renderPage = () => {
+        switch (activePage) {
+            case "home":
+                return <h1>Welcome to My Portfolio</h1>;
+            case "projects":
+                return <Portfolio />;
+            case "blog":
+                return <Blog />
+            case "about":
+                return <About />;
+            case "contact":
+                return <Contact />;
+            default:
+                return <h1>Page not found</h1>;
+        }
+    };
 
-export default App
+    return (
+        <div>
+            <Navbar setActivePage={setActivePage} />
+            <div style={{ padding: "20px" }}>{renderPage()}</div>
+        </div>
+    );
+};
+
+export default App;
