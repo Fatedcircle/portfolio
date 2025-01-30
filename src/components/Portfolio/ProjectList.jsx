@@ -1,30 +1,21 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Import Link
 
 const ProjectList = ({ projects }) => {
     return (
-        <div>
+        <div className="project-cards">
             {projects.length === 0 ? (
                 <p>No projects found.</p>
             ) : (
                 projects.map((project) => (
                     <div
                         key={project.name}
-                        className="project"
-                        style={{
-                            margin: "20px 0",
-                            border: "1px solid #ddd",
-                            padding: "10px",
-                            borderRadius: "5px",
-                        }}
+                        className="project-card"
                     >
                         <h3>{project.name}</h3>
                         <p>{project.description}</p>
-                        <p>
-                            <strong>Tags:</strong> {project.tags.join(", ")}
-                        </p>
                         <Link
-                            to={`/projects/${project.name}`}
+                            to={`/projects/${project.name}`} // Update to use Link
                             style={{
                                 color: "#3b82f6",
                                 textDecoration: "none",

@@ -10,7 +10,7 @@ const App = () => {
     return (
         <Router>
             <Navbar />
-            <div style={{ padding: "20px", width: "80vw" }}>
+            <div style={{ padding: "20px", width: "95vw" }}>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/projects" element={<Portfolio />} />
