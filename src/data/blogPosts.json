@@ -16,5 +16,17 @@
         "title": "Waarom kiezen voor een headless CMS?",
         "date": "25 januari 2025",
         "content": "Een headless CMS stelt je in staat om content te beheren zonder dat je gebonden bent aan een specifieke frontend technologie. Het biedt veel flexibiliteit voor ontwikkelaars."
+    },
+    {
+        "id": 4,
+        "title": "Waarom kiezen voor een headless CMS?",
+        "date": "25 december 2022",
+        "content": "Een headless CMS stelt je in staat om content te beheren zonder dat je gebonden bent aan een specifieke frontend technologie. Het biedt veel flexibiliteit voor ontwikkelaars."
+    },
+    {
+        "id": 5,
+        "title": "Waarom kiezen voor een headless CMS?",
+        "date": "25 januari 2022",
+        "content": "Een headless CMS stelt je in staat om content te beheren zonder dat je gebonden bent aan een specifieke frontend technologie. Het biedt veel flexibiliteit voor ontwikkelaars."
     }
 ]
