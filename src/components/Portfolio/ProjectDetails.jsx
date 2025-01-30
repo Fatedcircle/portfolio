@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { projects } from "../../data/projectsData";
+import { projects } from "../../data/projectsData"; // Import the projects data
 
 const ProjectDetails = () => {
-    const { projectName } = useParams();
-    const project = projects.find(p => p.name === projectName);
+    const { projectName } = useParams(); // Get the project name from the URL
+    const project = projects.find(p => p.name === projectName); // Find the project by name
 
     if (!project) {
         return <p>Select a project to see more details.</p>;
@@ -14,13 +14,13 @@ const ProjectDetails = () => {
             <h2>{project.name}</h2>
             <p>{project.details}</p>
             <h3>Images:</h3>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            <div className="project-images">
                 {project.images.map((image, index) => (
                     <img
                         key={index}
                         src={image}
                         alt={project.name}
-                        style={{ width: "100px", height: "auto", borderRadius: "5px" }}
+                        className="project-image"
                     />
                 ))}
             </div>

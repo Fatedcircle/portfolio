@@ -8,7 +8,7 @@ const FilterBar = ({
     setSearchQuery,
     setSortOrder,
 }) => {
-    const allTags = ["React", "JavaScript", "Node.js", "MongoDB", "Angular", "UI/UX", "API", "Design"];
+    const allTags = ["React", "JavaScript", "Node.js", "MongoDB", "Angular", "UI/UX", "API", "Design", "Theme", "Wordpress"];
 
     return (
         <div>
@@ -31,6 +31,7 @@ const FilterBar = ({
                     <option value="angular">Angular</option>
                     <option value="full-stack">Full-Stack</option>
                     <option value="ui-ux">UI/UX</option>
+                    <option value="wordpress">Wordpress</option>
                 </select>
             </div>
 
