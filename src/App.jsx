@@ -27,10 +27,10 @@ const App = () => {
     };
 
     return (
-        <div>
+        <>
             <Navbar setActivePage={setActivePage} />
-            <div style={{ padding: "20px" }}>{renderPage()}</div>
-        </div>
+            <div style={{ padding: "20px", width: "80vw" }}>{renderPage()}</div>
+        </>
     );
 };
 
