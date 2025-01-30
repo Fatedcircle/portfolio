@@ -1,5 +1,10 @@
-/* eslint-disable react/prop-types */
-const ProjectDetails = ({ project }) => {
+import { useParams } from "react-router-dom";
+import { projects } from "../../data/projectsData";
+
+const ProjectDetails = () => {
+    const { projectName } = useParams();
+    const project = projects.find(p => p.name === projectName);
+
     if (!project) {
         return <p>Select a project to see more details.</p>;
     }

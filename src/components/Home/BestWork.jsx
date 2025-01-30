@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { projects } from "../../data/projectsData";
 
 const BestWork = () => {
@@ -22,8 +23,8 @@ const BestWork = () => {
                         <h3>{project.name}</h3>
                         <p>{project.description}</p>
 
-                        <a
-                            href={`#${project.name}`}
+                        <Link
+                            to={`/projects/${project.name}`}
                             style={{
                                 color: "#3b82f6",
                                 textDecoration: "none",
@@ -31,7 +32,7 @@ const BestWork = () => {
                             }}
                         >
                             More Details
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

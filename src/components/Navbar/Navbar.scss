@@ -22,8 +22,8 @@
     border: none;
     color: white;
     font-size: 24px;
-    display: none;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .navbar-links {
@@ -47,22 +47,23 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-
 .navbar-links.mobile-open {
-    display: block;
-    position: absolute;
-    top: 60px;
+    display: flex;
+    position: fixed;
+    top: 0;
     left: 0;
+    height: 100vh;
     background-color: #3b82f6;
     width: 100%;
     flex-direction: column;
-    padding: 10px 0;
+    padding: 20px 0;
     gap: 10px;
     text-align: center;
+    z-index: 999;
 }
 
-.navbar-links.mobile-open li button {
-    width: 100%;
+.navbar-links a {
+    color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -75,6 +76,12 @@
     }
 
     .navbar-links.mobile-open {
-        display: block;
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
     }
 }

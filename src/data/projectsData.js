@@ -29,6 +29,9 @@ export const projects = [
         filter: "full-stack",
         tags: ["React", "Node.js", "MongoDB", "Full-Stack", "JavaScript"],
         description: "A full-stack social network app built with React (front-end) and Node.js (back-end).",
+        details: "test",
+        images: [],
+        videos: [],
         link: "https://github.com/yourusername/full-stack-social-network",
         date: "01-03-2022"
     },
@@ -38,51 +41,9 @@ export const projects = [
         filter: "ui-ux",
         tags: ["Design", "UI/UX", "E-commerce"],
         description: "A clean, modern e-commerce UI design with a focus on mobile responsiveness.",
-        link: "https://dribbble.com/yourusername/ui-design-ecommerce",
-        date: "01-03-2024"
-    },
-    {
-        name: "test",
-        score: 2,
-        filter: "ui-ux",
-        tags: ["Design", "UI/UX", "E-commerce"],
-        description: "A clean, modern e-commerce UI design with a focus on mobile responsiveness.",
-        link: "https://dribbble.com/yourusername/ui-design-ecommerce",
-        date: "01-03-2024"
-    },
-    {
-        name: "test1",
-        score: 2,
-        filter: "ui-ux",
-        tags: ["Design", "UI/UX", "E-commerce"],
-        description: "A clean, modern e-commerce UI design with a focus on mobile responsiveness.",
-        link: "https://dribbble.com/yourusername/ui-design-ecommerce",
-        date: "01-03-2024"
-    },
-    {
-        name: "test2",
-        score: 2,
-        filter: "ui-ux",
-        tags: ["Design", "UI/UX", "E-commerce"],
-        description: "A clean, modern e-commerce UI design with a focus on mobile responsiveness.",
-        link: "https://dribbble.com/yourusername/ui-design-ecommerce",
-        date: "01-03-2024"
-    },
-    {
-        name: "test3",
-        score: 2,
-        filter: "ui-ux",
-        tags: ["Design", "UI/UX", "E-commerce"],
-        description: "A clean, modern e-commerce UI design with a focus on mobile responsiveness.",
-        link: "https://dribbble.com/yourusername/ui-design-ecommerce",
-        date: "01-03-2024"
-    },
-    {
-        name: "pizza",
-        score: 10,
-        filter: "ui-ux",
-        tags: ["Design", "UI/UX", "E-commerce"],
-        description: "A clean, modern e-commerce UI design with a focus on mobile responsiveness.",
+        details: "test",
+        images: [],
+        videos: [],
         link: "https://dribbble.com/yourusername/ui-design-ecommerce",
         date: "01-03-2024"
     },

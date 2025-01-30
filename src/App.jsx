@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Blog from "./components/Blog/Blog";
@@ -7,30 +7,21 @@ import Contact from "./components/Contact/Contact";
 import HomePage from "./components/Home/HomePage";
 
 const App = () => {
-    const [activePage, setActivePage] = useState("home");
-
-    const renderPage = () => {
-        switch (activePage) {
-            case "home":
-                return <HomePage />;
-            case "projects":
-                return <Portfolio />;
-            case "blog":
-                return <Blog />
-            case "about":
-                return <About />;
-            case "contact":
-                return <Contact />;
-            default:
-                return <h1>Page not found</h1>;
-        }
-    };
-
     return (
-        <>
-            <Navbar setActivePage={setActivePage} />
-            <div style={{ padding: "20px", width: "80vw" }}>{renderPage()}</div>
-        </>
+        <Router>
+            <Navbar />
+            <div style={{ padding: "20px", width: "80vw" }}>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/projects" element={<Portfolio />} />
+                    <Route path="/projects/:projectName" element={<Portfolio />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="*" element={<h1>Page not found</h1>} />
+                </Routes>
+            </div>
+        </Router>
     );
 };
 

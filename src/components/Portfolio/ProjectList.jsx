@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-const ProjectList = ({ projects, onSelectProject }) => {
+import { Link } from "react-router-dom";
+
+const ProjectList = ({ projects }) => {
     return (
         <div>
             {projects.length === 0 ? (
@@ -11,21 +13,26 @@ const ProjectList = ({ projects, onSelectProject }) => {
                         className="project"
                         style={{
                             margin: "20px 0",
-                            cursor: "pointer",
                             border: "1px solid #ddd",
                             padding: "10px",
                             borderRadius: "5px",
                         }}
-                        onClick={() => onSelectProject(project)}
                     >
                         <h3>{project.name}</h3>
                         <p>{project.description}</p>
                         <p>
                             <strong>Tags:</strong> {project.tags.join(", ")}
                         </p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            View Project
-                        </a>
+                        <Link
+                            to={`/projects/${project.name}`}
+                            style={{
+                                color: "#3b82f6",
+                                textDecoration: "none",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            More Details
+                        </Link>
                     </div>
                 ))
             )}

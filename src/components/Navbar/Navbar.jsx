@@ -1,43 +1,27 @@
-/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import './Navbar.scss';
 
-const Navbar = ({ setActivePage }) => {
+const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    const handleMenuToggle = () => {
+    const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     return (
         <nav className="navbar">
-            <div>
-                <h1>My Portfolio</h1>
-            </div>
-
-            <button
-                onClick={handleMenuToggle}
-                className="hamburger-menu"
-            >
+            <h1>My Portfolio</h1>
+            <button className="hamburger-menu" onClick={toggleMobileMenu}>
                 ☰
             </button>
-
-            <ul
-                className={`navbar-links ${isMobileMenuOpen ? "mobile-open" : ""}`}
-            >
-                {["home", "projects", "blog", "about", "contact"].map((page) => (
-                    <li key={page}>
-                        <button
-                            onClick={() => {
-                                setActivePage(page);
-                                setIsMobileMenuOpen(false);
-                            }}
-                        >
-                            {page.charAt(0).toUpperCase() + page.slice(1)}
-                        </button>
-                    </li>
-                ))}
-            </ul>
+            <div className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+                <Link to="/">Home</Link>
+                <Link to="/projects">Projects</Link>
+                <Link to="/blog">Blog</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+            </div>
         </nav>
     );
 };

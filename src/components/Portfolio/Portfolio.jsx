@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProjectList from "./ProjectList";
 import ProjectDetails from "./ProjectDetails";
 import FilterBar from "./FilterBar";
@@ -39,23 +39,9 @@ const Portfolio = () => {
         })
     );
 
-    useEffect(() => {
-        const hash = window.location.hash;
-        if (hash) {
-            const projectName = hash.replace("#project-details-", "");
-            const project = projects.find((p) => p.name === projectName);
-            setSelectedProject(project);
-
-            const projectElement = document.getElementById(`project-details-${projectName}`);
-            if (projectElement) {
-                projectElement.scrollIntoView({ behavior: "smooth" });
-            }
-        }
-    }, []);
-
     return (
         <div style={{ display: "flex", gap: "20px"}} className="portfolio">
-            <div style={{ flex: "1" }}>
+            <div style={{ flex: "1", minWidth: "250px" }}>
                 <h1>My Portfolio</h1>
                 <FilterBar
                     selectedFilter={selectedFilter}
@@ -72,10 +58,8 @@ const Portfolio = () => {
                 />
             </div>
 
-            <div style={{ flex: "1", border: "1px solid #ddd", padding: "20px", borderRadius: "5px" }}>
-                <div id={`project-details-${selectedProject?.name}`}>
-                    <ProjectDetails project={selectedProject} />
-                </div>
+            <div style={{ flex: "2", border: "1px solid #ddd", padding: "20px", borderRadius: "5px" }}>
+                <ProjectDetails project={selectedProject} />
             </div>
         </div>
     );
